@@ -1,0 +1,69 @@
+# Exercise: Building a zippy component
+
+In this exercise we want to learn how to build reusable components that just communicate through `Input`'s and `Output`'s and are decouple from any specific application logic.
+
+### Scenario
+
+To build something useful for our application we are going to build a zippy. A zippy is a UI element that toggles the visibility of some content when you click on a title.
+
+So when it's closed it looks like this:
+
+```
+┌─────────────────────────────────┐
+│ ▶         Some Title            │
+└─────────────────────────────────┘
+```
+
+And when you click on the title bar it opens up, revealing the content and changing the little icon indicator.
+
+```
+┌─────────────────────────────────┐
+│ ▼         Some Title            │
+└─────────────────────────────────┘
+┌─────────────────────────────────┐
+│                                 │
+│                                 │
+│   Some Content  Some Content,   │
+│  ┌───────────┐  around an       │
+│  │           │  image or        │
+│  │   <img>   │  pretty much     │
+│  │           │  any html you    │
+│  └───────────┘  want.           │
+│                                 │
+└─────────────────────────────────┘
+```
+
+An important aspect here is that the content of the zippy component can be arbitrary html.
+
+From the perspective of the developer the usage of the zippy component should look like this:
+
+```html
+<zippy [title]="someExpression">
+    <p>Some Content</p>
+    <img src="some-image.jpg" />
+</zippy>
+```
+
+The component should expose `title` as input property and `toggle` as event that propagates the current state (open/closed) of the zippy.
+
+Use the zippy to wrap the address in the `ContactsDetailComponent` and toggle the title of the zippy between "Show address" and "Hide Address" accordingly.
+
+
+### Task
+
+1. Create the zippy component. Here is some markup that should get you started
+
+```
+<div class="zippy">
+  <div class="zippy__title">
+    {{ open ? '&#x025BE;' : '&#x025B8;' }} {{title}}
+  </div>
+  <div class="zippy__content">
+    <ng-content></ng-content>
+  </div>
+</div>
+```
+2. Annotate `title` and `open` with `@Input()` to allow external control
+3. Import and use `EventEmitter` to emit a `toggle` event and annotate it as `@Output`
+4. Use the zippy component to toggle the visibility of the address in the `ContactsDetailComponent`
+5. Toggle the title of the zippy component according to it's state (Show address / Hide address)

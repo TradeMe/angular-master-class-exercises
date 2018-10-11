@@ -1,0 +1,125 @@
+## Exercise: Refactor Effects to use Facade Architecture
+
+Effects decorators are not obvious processes. Another approach to managing async activities is to use a facade class to expose the properties desired and publish methods that hide all Store and RESTful server interactions.
+
+Since this facade class publishes properties as **Observables** we can use reactive features and the **async** pipe in our templates; and the templates will re-render when their associated observables receive emitted values.
+
+## Scenario
+
+Use the illustration below to guide you through the lab steps:
+
+![lab7-using-facades](https://cloud.githubusercontent.com/assets/210413/25640329/c83ddfb2-2f54-11e7-8623-b99afd669810.jpg)
+
+Let's implement and refactor our application to use a `ContactsFacade` class like this:
+
+```ts
+@Injectable()
+export class ContactsFacade {
+  // Exposed selectors
+  contacts$: Observable<Array<Contact>>;
+  selectedContact$: Observable<Contact>;
+  loaded$: Observable<boolean>;
+
+  constructor(
+    private store: Store<ApplicationState>,
+    private contactsService: ContactsService
+  ) { }
+
+  // Exposed public APIs
+  getContacts(): Observable<Array<Contact>> { ... }
+  getContact(contactId: string): Observable<Contact> { ... }
+  updateContact(contact: Contact): Observable<boolean> { ... }
+}
+```
+
+## Tasks
+
+1. Implement the class `ContactsFacade` in `state/contacts/contacts.facade.ts` as shown above.
+
+    * For the Observable properties, use `this.store.pipe(select( <QUERY> ))` to initialize each property with the appropriate Observable.
+
+    ```js
+    contacts$ = this.store.pipe(select( <GET_CONTACTS_QUERY> ));
+    selectedContact$ = this.store.pipe(select( <GET_SELECTED_CONTACT_QUERY> ));
+    loaded$ = this.store.pipe(select( <GET_IS_LOADED_QUERY> ));
+    ```
+
+    For `getContacts()`, use this as your starter code template:
+
+    ```js
+    getContacts(): Observable<Array<Contact>> {
+      return this.loaded$.pipe(
+        take(1),
+        mergeMap(loaded => {
+          if (loaded) return Observable.of(null);
+
+          return this.contactsService
+            .getContacts()
+            .pipe(tap( <ADD_CONTACTS_TO_LIST> ));
+        }),
+        // Map to contacts$ stream
+        .mergeMap(() => this.contacts$)
+      );
+    }
+    ```
+
+    For `getContact()`, use this as your starter code template:
+
+    ```js
+    getContact(contactId:string):Observable<Contact> {
+      // Select contact id
+
+      return this.loaded$.pipe(
+        take(1),
+        // Get latest value from selectedContact$ stream
+        withLatestFrom(this.selectedContact$),
+        mergeMap(([loaded, selectedContact]) => {
+          if (loaded) return Observable.of(null);
+
+          return this.contactsService
+            .getContact(contactId)
+            .pipe(tap( <ADD_CONTACT_TO_LIST> ));
+        }),
+        // Map to contact$ stream
+        mergeMap(() => this.selectedContact$)
+      );
+    }
+    ```
+
+    For `updateContact()`, use this as your starter code template:
+
+    ```js
+    updateContact(contact: Contact): Observable<boolean> {
+      return this.contactsService
+        .updateContact(contact).pipe(
+            map(() => {
+              <UPDATE_CONTACT_ACTION>
+              return true;
+            }),
+            catchError(() => Observable.of(false))
+        );
+    }
+    ```
+
+2. Delete the **ContactEffects** class.
+
+3. Update the `ContactsModule` in `app.module.ts`:
+
+   * Remove unnecessary imports and get rid of the registration of our Effect class:
+
+   `EffectsModule.forRoot([ContactsEffects])`
+
+   * Register a provider for `ContactsFacade`.
+
+4. Update the `ContactExistGuard`, `ContactsListComponent`, `ContactsDetailComponent` and `ContactsEditorComponent` to use `ContactsFacade`.
+
+   * Remove use of the `ContactsService`, `ApplicationState`, store, and actions
+
+5. Update the `ContactsActions` to remove deprecated actions
+
+   * Remove **LoadContactsAction**
+   * Remove **UpdateContactAction**
+
+## Next Lab
+
+Congratulations! You are done.
