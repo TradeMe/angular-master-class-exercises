@@ -23,7 +23,7 @@ Import this type and create a `contact` property of this type in `ContactsAppCom
     phone: '',
     birthday: '',
     website: '',
-    image: '/assets/images/6.jpg',
+    image: 'assets/images/6.jpg',
     address: {
       street: '6554 park lane',
       zip: '43378',
