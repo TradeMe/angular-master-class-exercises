@@ -9,49 +9,63 @@ into the workflow.
 Let's create two (2) new actions **SelectContactAction** and **UpdateContactAction** that
 will be used to view contact details or for the editor-view.
 
+## Tasks
+
+1. Create the two (2) new actions in the `contacts-actions.ts` module. 
+ * Implement the **SelectContactAction** class used to select the contact in the store:
+ * Implement the **UpdateContactAction** class used to save the contact changes to the server:
+2. Update the Contacts reducer `contacts-reducer.ts`. 
+ * Using **SelectContactAction**, select the contact by the specified id (payload).
+ * Using **UpdateContactAction**, add the contact or merge the current values into appropriate contact item in the store list.
+3. Modify the **ContactDetailsComponent** to use the logic shown in the UML diagram above
+ *  ngOnInit() should dispatch `SelectContactAction`
+ *  `contact$ : Observable<Contact> = this.store.select(...)`
+4. Modify the **ContactEditorComponent** to use the logic shown in the UML diagram above.
+ *  ngOnInit() should dispatch `SelectContactAction`
+ *  `contact$ : Observable<Contact> = this.store.select(...)`
+ *  `save()` should call `ContactsService::UpdateContact()` and then dispatch `UpdateContactAction()` and then route to the contact details.
+  
+## UML Flow Diagrams
+
 Shown below is a UML sequence diagram that clearly shows how actions will be integrated into
 the workflow process. Using this diagram, make the appropriate source changes to implement this improved,
 Redux workflow.
 
 ![ngrx-step-2-select-and-edit-contact](https://cloud.githubusercontent.com/assets/210413/25500318/30de6c62-2b54-11e7-8bcf-3b2d6bb6ab70.png)
 
-## Tasks
+## Code Snippets
 
-1. Create the two (2) new actions in the `contacts-actions.ts` module.
+###### `contacts.actions.ts`
 
-    Implement the **SelectContactAction** class used to select the contact in the store:
+```ts
+export class SelectContactAction implements Action {
+  readonly type = ContactsActionTypes.SELECT_CONTACT;
+  constructor(public payload: number) {}
+}
 
-    ```js
-    export class SelectContactAction implements Action {
-      readonly type = ContactsActionTypes.SELECT_CONTACT;
-      constructor(public payload: number) { }
-    }
-    ```
+export class UpdateContactAction implements Action {
+  readonly type = ContactsActionTypes.UPDATE_CONTACT;
 
-    Implement the **UpdateContactAction** class used to save the contact changes to the server:
+  constructor(public payload: Contact) {}
+}
 
-    ```js
-    export class UpdateContactAction implements Action {
-      readonly type = ContactsActionTypes.UPDATE_CONTACT;
+export type ContactsActions = 
+    LoadContactsSuccessAction
+    | SelectContactAction
+    | UpdateContactAction;
+```
+    
+###### `contacts.reducer.ts`
 
-      constructor(public payload: Contact) { }
-    }
+![ngrx2 1](https://user-images.githubusercontent.com/210413/46924887-179a0e00-d085-11e8-8828-38d86e557e7a.jpg)
 
-    export type ContactsActions = LoadContactsSuccessAction
-      | SelectContactAction
-      | UpdateContactAction;
-    ```
+###### `contacts-detail.component.ts`
 
-    > Make sure to update the `ContactState` as well as the `INITIAL_STATE`.
+![ngrx2 2](https://user-images.githubusercontent.com/210413/46927554-7ca83080-d092-11e8-89a6-5580c2dda015.jpg)
 
-2. Update the Contacts reducer `contacts-reducer.ts`.
+###### `contacts-editor.component.ts`
 
-    *  Using **SelectContactAction**, select the contact by the specified id (payload).
-    *  Using **UpdateContactAction**, add the contact or merge the current values into appropriate contact item in the store list.
-
-3. Modify the **ContactDetailsComponent** to use the logic shown in the UML diagram above.
-
-4. Modify the **ContactEditorComponent** to use the logic shown in the UML diagram above.
+![ngrx2 3](https://user-images.githubusercontent.com/210413/46927724-6cdd1c00-d093-11e8-990e-a09ad92ee999.jpg)
 
 ## Next Lab
 
