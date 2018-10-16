@@ -23,7 +23,8 @@ We don't have any validations in our new form. Let's use the built-in `required`
 
 ###### `contacts-creator.component.html`
 
-![](https://user-images.githubusercontent.com/210413/46901875-05e72800-cf18-11e8-9a23-2c7809348738.png)
+![f2 1](https://user-images.githubusercontent.com/210413/46991734-a0877700-d163-11e8-986d-b7816ab00356.jpg)
+
 
 ## Bonus Tasks
 
