@@ -64,6 +64,10 @@ In this lab, we want to extract all of our selectors from the components into `c
 ## Code Snippets
 
 
+###### `contacts.reducer.ts`
+
+![ngrx4 4](https://user-images.githubusercontent.com/210413/47106765-fbc08300-d2a3-11e8-84f4-043bd5695c9e.jpg)
+
 ![ngrx4 1](https://user-images.githubusercontent.com/210413/47105965-ec403a80-d2a1-11e8-9b33-331975e9aaa1.jpg)
 
 ###### `contacts.selectors.ts`
@@ -73,6 +77,7 @@ In this lab, we want to extract all of our selectors from the components into `c
 ###### `contacts-list.component.ts`
 
 ![ngrx4 3](https://user-images.githubusercontent.com/210413/47105962-eba7a400-d2a1-11e8-8f9f-6050ac1bd373.jpg)
+
 
 
 ## Next Lab
