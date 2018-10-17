@@ -1,4 +1,4 @@
-## Exercise: Refactor Query Selectors and use Entity Pattern
+## Exercise: Refactor with Query Selectors & Entity Pattern
 
 Our Contacts applications has selectors defined in almost every component including `ContactsListComponent`, `ContactsDetailComponent` and `ContactsEditorComponent`. That's unfortunate because it's not really maintainable, DRY and therefore not reusable if components share common selectors.
 
@@ -37,6 +37,15 @@ In this lab, we want to extract all of our selectors from the components into `c
 
 2. Add the following queries: `getContactsEntities`, `getSelectedContactId`.
 
+3. Use the `createFeatureSelector()` to load the NgRx state for `contacts`:
+
+```js 
+  // Lookup the 'Contacts' feature state managed by NgRx
+  export const getContactsState = createFeatureSelector<ContactsState>(FEATURE_CONTACTS);
+  
+  export const getContactsEntities = createSelector(getContactsState, (state:ContactsState) => state.entities);
+```
+
 3. Implement the following composed queries using `createSelector`:
 
     * `getContacts` and
@@ -66,9 +75,9 @@ In this lab, we want to extract all of our selectors from the components into `c
 
 ###### `contacts.reducer.ts`
 
-![ngrx4 4](https://user-images.githubusercontent.com/210413/47106765-fbc08300-d2a3-11e8-84f4-043bd5695c9e.jpg)
-
 ![ngrx4 1](https://user-images.githubusercontent.com/210413/47105965-ec403a80-d2a1-11e8-9b33-331975e9aaa1.jpg)
+
+![ngrx4 4](https://user-images.githubusercontent.com/210413/47106765-fbc08300-d2a3-11e8-84f4-043bd5695c9e.jpg)
 
 ###### `contacts.selectors.ts`
 
