@@ -26,8 +26,7 @@ export class ContactsFacade {
   ) { }
 
   // Exposed public APIs
-  getContacts(): Observable<Array<Contact>> { ... }
-  getContact(contactId: string): Observable<Contact> { ... }
+  getContactById(contactId: string): Observable<Contact> { ... }
   updateContact(contact: Contact): Observable<boolean> { ... }
 }
 ```
@@ -44,35 +43,16 @@ export class ContactsFacade {
     loaded$ = this.store.pipe(select( <GET_IS_LOADED_QUERY> ));
     ```
 
-    For `getContacts()`, use this as your starter code template:
-
-    ```js
-    getContacts(): Observable<Array<Contact>> {
-      return this.loaded$.pipe(
-        take(1),
-        mergeMap(loaded => {
-          if (loaded) return Observable.of(null);
-
-          return this.contactsService
-            .getContacts()
-            .pipe(tap( <ADD_CONTACTS_TO_LIST> ));
-        }),
-        // Map to contacts$ stream
-        .mergeMap(() => this.contacts$)
-      );
-    }
-    ```
 
     For `getContact()`, use this as your starter code template:
 
     ```js
-    getContact(contactId:string):Observable<Contact> {
-      // Select contact id
-
+    getContactById(contactId:string):Observable<Contact> {
+      // Select contact id >
+      
       return this.loaded$.pipe(
         take(1),
-        // Get latest value from selectedContact$ stream
-        withLatestFrom(this.selectedContact$),
+        withLatestFrom(this.selectedContact$),   // Get latest value from selectedContact$ stream
         mergeMap(([loaded, selectedContact]) => {
           if (loaded) return Observable.of(null);
 
