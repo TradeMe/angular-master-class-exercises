@@ -107,6 +107,22 @@ Use the following diagram to refactor your application with the ngrx `@Effect()`
 
     > This function expects an array of Effect classes as its first argument (`[ContactsEffect]`).
 
+
+## Code Snippets
+
+##### `contacts.effects.ts`
+
+![ngrx5 1](https://user-images.githubusercontent.com/210413/47119625-14429480-d2c8-11e8-81a1-bde96de5feaa.jpg)
+
+##### `contacts-list.component.ts`
+
+![ngrx5 2](https://user-images.githubusercontent.com/210413/47119624-14429480-d2c8-11e8-8aeb-4dee0fd0b52d.jpg)
+
+##### `contacts-ngrx.module.ts`
+
+![ngrx5 3](https://user-images.githubusercontent.com/210413/47119623-14429480-d2c8-11e8-9ca2-6d7636d7ac92.jpg)
+
+
 ## Next Lab
 
 Go to [Step 7: Refactor to Facade Architecture](step-7-reactor-to-facade-architecture.md)
