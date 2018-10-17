@@ -26,7 +26,7 @@ In this lab, we want to extract all of our selectors from the components into `c
     * Specifically, you need to update `LOAD_CONTACTS_SUCCESS`, `ADD_CONTACT` and `UPDATE_CONTACT`.
     * For `LOAD_CONTACTS_SUCCESS`, make sure to flatten the Array into entities. Hint: You can use `Array.reduce`.
 
-3. Create a `namespace` below the `contactsReducer` in `contacts.reducer.ts`:
+3. Create a `contacts.selectors.ts` file with a `namespace ContactsQuery`:
 
     ```js
     export namespace ContactsQuery {
@@ -60,6 +60,20 @@ In this lab, we want to extract all of our selectors from the components into `c
 5. Use `ContactsQuery` selectors in `ContactsEditorComponent`. Remember to **clone** the contact **after** you selected it. You can use `map` for this.
 
 6. Use `ContactsQuery` selectors in `ContactExistsGuard`.
+
+## Code Snippets
+
+
+![ngrx4 1](https://user-images.githubusercontent.com/210413/47105965-ec403a80-d2a1-11e8-9b33-331975e9aaa1.jpg)
+
+###### `contacts.selectors.ts`
+
+![ngrx4 2](https://user-images.githubusercontent.com/210413/47105963-ec403a80-d2a1-11e8-862f-741b02571d96.jpg)
+
+###### `contacts-list.component.ts`
+
+![ngrx4 3](https://user-images.githubusercontent.com/210413/47105962-eba7a400-d2a1-11e8-8f9f-6050ac1bd373.jpg)
+
 
 ## Next Lab
 
