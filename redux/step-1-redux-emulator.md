@@ -24,7 +24,7 @@ This will be a simple emulation of the Redux synchronous functionality.
 The AppStore class already has the store-like methods:
 
 ```ts
-export class AppStore {
+export class VoterStore {
    dispatch(action) { /* .... */ }
    subscribe(listener) { /* .... */ }
    getState(): any { /* .... */ }
@@ -34,7 +34,7 @@ export class AppStore {
 ## Tasks
 
 1. Use the following actions to increment or decrement the votes:
-    *  Add the actions (below) to the `src/app/store/app-store.ts`  
+    *  Add the actions (below) to the `src/app/store/voter-store.ts`  
     ```js
        export const VoteActions = {
          NO : "NO",
@@ -54,4 +54,4 @@ export class AppStore {
 
 ## Next Lab
 
-Go to [Step 2: Using the Redux Library](redux/step-2-use-createStore.md)
+Go to [Step 2: Using the Redux Library](step-2-use-createStore.md)
