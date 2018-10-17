@@ -45,7 +45,7 @@ export class VoterStore {
 2. Update the **VoterComponent** to dispatch actions 
     * Dispatch VoteActions using plain objects with a `type` property   
 
-3. Update `AppStore::reducer` to modify the store state for YES/NO actions.
+3. Update `VoterStore::reducer` to modify the store state for YES/NO actions.
     > Make sure you return a new state object instead of mutating the existing object!
 
 4. See how the StatusComponent vote count changes as the vote buttons are clicked.
