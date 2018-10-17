@@ -91,4 +91,4 @@ In this lab, we want to extract all of our selectors from the components into `c
 
 ## Next Lab
 
-Go to [Step 5: Apply Meta-Reducers](step-5-apply-middleware.md)
+Go to [Step 5: Apply Meta-Reducers](step-5-apply-meta-reducers.md)
