@@ -16,7 +16,7 @@ In this lab, we want to extract all of our selectors from the components into `c
 
 ## Tasks
 
-1. Change `ContactState` and refactor the list property to be entities.
+1. Change `ContactState` and refactor the `list` property to be `entities`.
 
     * Rename the property to `entities` and set the type to `{ [key: number]: Contact }`.
     * Don't forget to update `INITIAL_STATE`.
