@@ -110,6 +110,12 @@ export class ContactsFacade {
 
 ![ngrx6 2](https://user-images.githubusercontent.com/210413/47120320-a9df2380-d2ca-11e8-97bc-242b11b78763.jpg)
 
+
+##### `contacts-list.component.ts`
+
+![ngrx6 3](https://user-images.githubusercontent.com/210413/47120520-81a3f480-d2cb-11e8-9c01-51b3fdd42e36.jpg)
+
+
 ## Next Lab
 
 Congratulations! You are done.
