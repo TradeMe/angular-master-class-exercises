@@ -100,6 +100,16 @@ export class ContactsFacade {
    * Remove **LoadContactsAction**
    * Remove **UpdateContactAction**
 
+## Code Snippets
+
+##### `contacts.facade.ts`
+
+![ngrx6 1](https://user-images.githubusercontent.com/210413/47120321-a9df2380-d2ca-11e8-9b39-07021751a215.jpg)
+
+##### `contact-exists.guard.ts`
+
+![ngrx6 2](https://user-images.githubusercontent.com/210413/47120320-a9df2380-d2ca-11e8-97bc-242b11b78763.jpg)
+
 ## Next Lab
 
 Congratulations! You are done.
