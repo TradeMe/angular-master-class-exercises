@@ -76,4 +76,4 @@ Let's refactor our contacts application and allow deep linking by implementing a
 
 ## Next Lab
 
-Go to [Step 4: Extract Selectors](step-4-extract-selectors-and-use-reselect.md)
+Go to [Step 4: Extract Selectors](step-4-extract-selectors-and-use-entity-pattern.md)
