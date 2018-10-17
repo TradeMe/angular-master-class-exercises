@@ -38,30 +38,7 @@ Let's refactor our contacts application and allow deep linking by implementing a
 
 4. Create a `ContactExistsGuard` in `/src/app/contact-exists.guard.ts` and implement the `CanActivate` interface. You can do that using the Angular CLI: `ng g g contact-exists -m app`:
 
-    ```js
-    canActivate(route: ActivatedRouteSnapshot) {
-      // Get contact id using the ActivatedRouteSnapshot
-      // Dispatch SelectContactAction
-
-      return this.store.pipe(
-        select( <SELECT_LOADED_PROPERTY> )),
-        take(1),
-        mergeMap(loaded => {
-          if (loaded) return of(true);
-
-          return <CONTACT_SERVICE_GET_CONTACT>.pipe(
-            tap( <DISPATCH_ADD_CONTACT_ACTION> ),
-            map(contact => !!contact)
-          );
-        })
-      );
-    }
-    ```
-
-    * Import `of` from `rxjs`. All other operators are imported from `rxjs/operators`.
-
-    * Dispatch `SelectContactAction` and give it the contact id from the `ActivatedRouteSnapshot` using
-      `route.paramMap.get('id')`.
+    * In the `canActivate()` method, dispatch `SelectContactAction` and give it the contact id from the `ActivatedRouteSnapshot` using `route.paramMap.get('id')`.
 
     * Select `loaded` from the store in order to check whether the list was already fetched. Make sure to
       chain `take(1)` to your stream which returns a specified number of contiguous events. In this case
@@ -69,7 +46,7 @@ Let's refactor our contacts application and allow deep linking by implementing a
 
       > Remember that `store.pipe(select(<function>))` returns an observable.
 
-    * Use `mergeMap` to map to an inner observable which will be the results of `this.contactsService.getContact(contactId)`.
+    * Use `switchMap` to map to an inner observable which will be the results of `this.contactsService.getContact(contactId)`.
 
     * If you are calling `getContact` make sure to dispatch `AddContactAction` once the http call has been resolved.
 
@@ -89,6 +66,13 @@ Let's refactor our contacts application and allow deep linking by implementing a
    the `SelectContactAction` anymore.
 
     > This is now handled by the guard.
+
+
+## Code Snippets
+
+###### `/src/app/contact-exists.guard.ts`
+
+![ngrxl3 1](https://user-images.githubusercontent.com/210413/47104576-43441080-d29e-11e8-936c-e121ed1c850a.jpg)
 
 ## Next Lab
 
