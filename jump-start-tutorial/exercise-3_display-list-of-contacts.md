@@ -42,4 +42,4 @@ Import that data, assign it a `contacts` property of `ContactsAppComponent` and 
 
 ## Next Lab
 
-Go to [JumpStart - Lab #4](exercise-4_introduce-contactsservice.md)
+Go to [JumpStart - Lab #4](step-4-extract-selectors-and-use-entity-pattern.md`)
