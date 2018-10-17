@@ -38,12 +38,12 @@ By separating these two concerns (reusable renderer and specific view component)
 ## Code Snippets
 
 
-###### `contacts-details-view.component.html`
+###### `contacts-details-view.component.ts`
 
 ![a1](https://user-images.githubusercontent.com/210413/46903486-1a381e80-cf32-11e8-9139-9c09a534b96e.jpg)
 
 
-###### `contacts-details.component.html`
+###### `contacts-detail.component.ts`
 
 ![a2](https://user-images.githubusercontent.com/210413/46903485-199f8800-cf32-11e8-92b7-d28c28644a45.jpg)
 
