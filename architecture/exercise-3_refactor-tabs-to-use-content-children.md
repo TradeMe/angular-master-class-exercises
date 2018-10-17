@@ -51,7 +51,7 @@ Our `TabsComponent` is great! However, it turns out, Angular Material comes with
 
 ###### `contacts-editor.component.html`
 
-![group 10](https://user-images.githubusercontent.com/210413/46908072-71adad00-cf79-11e8-8e26-db8da519705d.jpg)
+![a3 1](https://user-images.githubusercontent.com/210413/47057248-4ac2d580-d21c-11e8-82cd-05b15ebee59a.jpg)
 
 
 ## Next Lab
