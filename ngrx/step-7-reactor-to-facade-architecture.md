@@ -1,4 +1,4 @@
-## Exercise: Refactor Effects to use Facade Architecture
+## Exercise: Refactor to use Facade Architecture
 
 Effects decorators are not obvious processes. Another approach to managing async activities is to use a facade class to expose the properties desired and publish methods that hide all Store and RESTful server interactions.
 
@@ -118,4 +118,4 @@ export class ContactsFacade {
 
 ## Next Lab
 
-Congratulations! You are done.
+Go to [Lab 8: Improve your Effects](step-8-improve-effects.md)
