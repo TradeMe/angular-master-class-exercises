@@ -57,7 +57,7 @@ export type ContactsActions =
     
 ###### `contacts.reducer.ts`
 
-![ngrx2 1](https://user-images.githubusercontent.com/210413/46924887-179a0e00-d085-11e8-8828-38d86e557e7a.jpg)
+![ngrx2 1](https://user-images.githubusercontent.com/210413/47127084-22a0a880-d2e8-11e8-84dd-fc71b0ab3cfe.jpg)
 
 ###### `contacts-detail.component.ts`
 
