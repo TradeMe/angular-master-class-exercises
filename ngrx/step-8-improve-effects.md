@@ -1,8 +1,8 @@
 ## Exercise: Improve Effects with Deciders/Splitters
 
 Effects can also be used to:
-  * split 1 action into multiple actions; to spawn 1..n other actions
-  * decide on output action based on content or biz logic
+  * Split 1 action into multiple actions; to spawn 1..n other actions
+  * Decide on *output action(s)* based on input content or biz logic
   
 ## Scenario
 
