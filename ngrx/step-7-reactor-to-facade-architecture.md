@@ -83,10 +83,6 @@ export class ContactsFacade {
 
 2. Update the `ContactsModule` in `app.module.ts`:
 
-   * Remove unnecessary imports and get rid of the registration of our Effect class:
-
-   `EffectsModule.forRoot([ContactsEffects])`
-
    * Register a provider for `ContactsFacade`.
 
 3. Update the `ContactExistGuard`, `ContactsListComponent`, `ContactsDetailComponent` and `ContactsEditorComponent` to use `ContactsFacade`.
