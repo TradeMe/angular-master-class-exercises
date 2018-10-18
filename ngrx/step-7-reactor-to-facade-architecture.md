@@ -81,9 +81,7 @@ export class ContactsFacade {
     }
     ```
 
-2. Delete the **ContactEffects** class.
-
-3. Update the `ContactsModule` in `app.module.ts`:
+2. Update the `ContactsModule` in `app.module.ts`:
 
    * Remove unnecessary imports and get rid of the registration of our Effect class:
 
@@ -91,11 +89,11 @@ export class ContactsFacade {
 
    * Register a provider for `ContactsFacade`.
 
-4. Update the `ContactExistGuard`, `ContactsListComponent`, `ContactsDetailComponent` and `ContactsEditorComponent` to use `ContactsFacade`.
+3. Update the `ContactExistGuard`, `ContactsListComponent`, `ContactsDetailComponent` and `ContactsEditorComponent` to use `ContactsFacade`.
 
    * Remove use of the `ContactsService`, `ApplicationState`, store, and actions
 
-5. Update the `ContactsActions` to remove deprecated actions
+4. Update the `ContactsActions` to remove deprecated actions
 
    * Remove **LoadContactsAction**
    * Remove **UpdateContactAction**
