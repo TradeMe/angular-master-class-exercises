@@ -13,15 +13,15 @@ Let's also list for `LOAD_CONTACT_DETAILS` to BOTH (1) select the contactId and 
 
 ## Tasks
 
-1. In `contacts.actions.ts` create 
+1. In **`contacts.actions.ts`** create 
   * a `class NoopAction` action class that does not have a payload.
   * a `class LoadContactAction` to load a contact information (used in Content-based Decider below)
   * a `class LoadContactDetailsAction` class that requests to load details of a specific contact. (used in Action Splitter below)
-2. In `contacts.effects.ts` create an 
+2. In **`contacts.effects.ts`** create an 
   * **Content-Based Action Decider** `@Effect() getContact$` that checks `facade.loaded$` to determine if the action should be ignored (and return the NoopAction) or if the contact should be loaded (using the contactsService).
   * **Action Splitter** `@Effect() getContactDetails$` that will emit 2 actions: `SelectContactAction` and `LoadContactAction` 
 3. Make sure all view components are using ONLY the ContactsFacade observables and methods; remove all uses of Store and ContactsService
-4. Update `ContactsFacade::getContactById(contactId)` to use these new effects.
+4. Update **`ContactsFacade::getContactById(contactId)`** to dispatch actions to use these new effects.
 
 ## Code Snippets
 
