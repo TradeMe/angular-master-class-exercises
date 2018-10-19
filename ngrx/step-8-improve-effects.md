@@ -1,3 +1,4 @@
+
 ## Exercise: Improve Effects with Deciders/Splitters
 
 Effects can also be used to:
@@ -38,4 +39,4 @@ Let's also list for `LOAD_CONTACT_DETAILS` to BOTH (1) select the contactId and 
 
 ## Next Lab
 
-Congratulations! You are done.
+Go to [Lab 8: Improve your Effects](step-9-use-ngrx-entity.md)
