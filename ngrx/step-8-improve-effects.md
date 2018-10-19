@@ -34,7 +34,7 @@ Let's also list for `LOAD_CONTACT_DETAILS` to BOTH (1) select the contactId and 
 
 ##### `contacts.facade.ts`
 
-![ngrx8 3](https://user-images.githubusercontent.com/210413/47188227-b7acab80-d393-11e8-9b21-9e578ed13a03.jpg)
+![ngrx8 3](https://user-images.githubusercontent.com/210413/47195996-fd309f00-d3ba-11e8-9fb0-d14cdfe63fc8.jpg)
 
 ##### `contacts.actions.ts`
 
