@@ -36,6 +36,10 @@ Let's also list for `LOAD_CONTACT_DETAILS` to BOTH (1) select the contactId and 
 
 ![ngrx8 3](https://user-images.githubusercontent.com/210413/47188227-b7acab80-d393-11e8-9b21-9e578ed13a03.jpg)
 
+##### `contacts.actions.ts`
+
+![ngr9 5](https://user-images.githubusercontent.com/210413/47195653-497adf80-d3b9-11e8-94d1-ec50cb0616e5.jpg)
+
 
 ## Next Lab
 
