@@ -12,15 +12,14 @@ Shown below are quick-links and ordering of the courseware Modules:
 
 * Module 1: **[Jump-Start](https://github.com/TradeMe/angular-master-class-exercises/tree/master/jump-start-tutorial)**
 * Module 2: **[Observables](https://github.com/TradeMe/angular-master-class-exercises/tree/master/observables)**
-* Module 3: **[Architecture](https://github.com/TradeMe/angular-master-class-exercises/tree/master/architecture)**
-* Module 4: **[Routing](https://github.com/TradeMe/angular-master-class-exercises/tree/master/routing)**
-* Module 5: **[Forms](https://github.com/TradeMe/angular-master-class-exercises/tree/master/forms)**
-* Module 6: **[Redux](https://github.com/TradeMe/angular-master-class-exercises/tree/master/redux)**
-* Module 7: **[ngrx](https://github.com/TradeMe/angular-master-class-exercises/tree/master/ngrx)**
+* Module 3: **[Forms](https://github.com/TradeMe/angular-master-class-exercises/tree/master/forms)**
+* Module 4: **[Architecture](https://github.com/TradeMe/angular-master-class-exercises/tree/master/architecture)**
+* Module 5: **[Routing](https://github.com/TradeMe/angular-master-class-exercises/tree/master/routing)**
+* Module 6: **[ngrx](https://github.com/TradeMe/angular-master-class-exercises/tree/master/ngrx)**
+* Module 7: **[Reusable Libraries](https://github.com/TradeMe/angular-master-class-exercises/tree/master/reusable-libraries)**
 * Module 8: **[Testing](https://github.com/TradeMe/angular-master-class-exercises/tree/master/testing)**
-* Module 9: **[Universal](https://github.com/TradeMe/angular-master-class-exercises/tree/master/universal)**
-* Module 10: **[Reusable Libraries](https://github.com/TradeMe/angular-master-class-exercises/tree/master/reusable-libraries)**
-* Module 11: **[PWA](https://github.com/TradeMe/angular-master-class-exercises/tree/master/pwa)**
+* Module 9: **[PWA](https://github.com/TradeMe/angular-master-class-exercises/tree/master/pwa)**
+* Module 10: **[Universal](https://github.com/TradeMe/angular-master-class-exercises/tree/master/universal)**
 
 For each lab exercise, simply open there `exercise-<xxx>-<xxx>` markdown associated with that exercise.
 
