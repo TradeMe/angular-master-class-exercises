@@ -55,7 +55,7 @@ Use the build environment to differentiate production vs development builds. The
 
 ## Next Lab
 
-Go to [Step 6: Using Effects for Asynchronous Actions](step-6-async-with-effects.md)
+Go to [Step 6: Using Effects for Asynchronous Actions](step-5-async-with-effects.md)
 
 ## Technical Considerations
 

@@ -125,7 +125,7 @@ Use the following diagram to refactor your application with the ngrx `@Effect()`
 
 ## Next Lab
 
-Go to [Step 7: Refactor to Facade Architecture](step-7-reactor-to-facade-architecture.md)
+Go to [Step 7: Refactor to Facade Architecture](step-6-reactor-to-facade-architecture.md)
 
 ## Technical Considerations
 

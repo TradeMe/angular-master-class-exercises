@@ -112,4 +112,4 @@ export class ContactsFacade {
 
 ## Next Lab
 
-Go to [Lab 8: Improve your Effects](step-8-improve-effects.md)
+Go to [Lab 8: Improve your Effects](step-7-improve-effects.md)

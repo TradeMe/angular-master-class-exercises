@@ -41,4 +41,4 @@ Let's also list for `LOAD_CONTACT_DETAILS` to BOTH (1) select the contactId and 
 
 ## Next Lab
 
-Go to [Lab 8: Use @ngrx/entity](step-9-use-ngrx-entity.md)
+Go to [Lab 8: Use @ngrx/entity](step-8-use-ngrx-entity.md)
