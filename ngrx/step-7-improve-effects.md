@@ -28,9 +28,7 @@ Let's also list for `LOAD_CONTACT_DETAILS` to BOTH (1) select the contactId and 
 
 ##### `contacts.effect.ts`
 
-![ngrx8 1](https://user-images.githubusercontent.com/210413/47187879-44ef0080-d392-11e8-9785-20f3a7ff732b.jpg)
-
-![ngrx8 2](https://user-images.githubusercontent.com/210413/47187878-44566a00-d392-11e8-9c9d-b1dd41ab7204.jpg)
+![ngrx8 1](https://user-images.githubusercontent.com/210413/47473421-2d6fa780-d7d8-11e8-9547-75c55a4f6d06.jpg)
 
 ##### `contacts.facade.ts`
 
