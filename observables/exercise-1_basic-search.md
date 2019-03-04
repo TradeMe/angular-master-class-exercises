@@ -19,7 +19,7 @@ In `src/app/contacts-list/contacts-list.component.html` you already have the pro
   ```html
   <mat-toolbar>
     <mat-form-field color="accent" class="trm-search-container">
-      <input matInput type="text">
+      <input matInput type="text" (input)="search($event.target.value)">
     </mat-form-field>
     <mat-icon color="accent">search</mat-icon>
   </mat-toolbar>
