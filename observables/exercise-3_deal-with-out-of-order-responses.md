@@ -36,7 +36,7 @@ Fortunately we can simply use the `merge` static method to merge in `this.contac
 
 ## Bonus Tasks
 
-1. Simulate that the initial loading of contacts takes 5000ms (e.g. `contactsService.getContacts().delay(5000)`). 
+1. Simulate that the initial loading of contacts takes 5000ms (e.g. `contactsService.getContacts().pipe(delay(5000))`). 
  This causes search results to get overwritten by the full list when performing a search quickly after the application  starts. Find a way to get around this.
  >  Hint: use the `takeUntil()` operator.
  
