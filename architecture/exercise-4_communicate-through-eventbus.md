@@ -47,7 +47,7 @@ Use the EventBusService to update the application `title` based on the current, 
 
 ###### `app.component.ts`
 
-![a7](https://user-images.githubusercontent.com/210413/46903766-0d1d2e80-cf36-11e8-830e-e70d3c3171aa.jpg)
+![image](https://user-images.githubusercontent.com/210413/54007889-f3240700-41c8-11e9-8124-f105b2393a4a.png)
 
 ###### `contacts-list.component.ts`
 
