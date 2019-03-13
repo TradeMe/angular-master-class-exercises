@@ -1,4 +1,4 @@
-## Exercise: Use ngrx within Contacts App
+## Exercise: Use NgRx within Contacts App
 
 Let's use **ngrx** to configure our Contacts application to use the the core building blocks from the Redux pattern - store, reducers, and actions.
 
