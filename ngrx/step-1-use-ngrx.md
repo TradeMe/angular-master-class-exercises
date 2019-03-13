@@ -18,6 +18,9 @@ After installing and configuring the **ngrx** library, which you don't have to d
 2.  Create the Contacts reducer `src/app/state/contacts/contacts.reducer.ts` to process our Contacts actions.
   * Define the `FEATURE_KEY = 'contacts'` to be used to register the reducer (in Step 6 below).
   * Define the initial state
+  * Define the **contactsReducer** as a **pure** function:
+4.  Update the `src/app/contacts-ngrx.module.ts` to use `StoreModule.forFeature()` register the `contacts` state management within our application by using the `StoreModule.forFeature()` function.
+5.  Create ApplicationState
   ##### app.state.ts
 ```ts
 import {ContactsState, FEATURE_KEY} from './contacts/contacts.reducer';
@@ -26,9 +29,7 @@ export interface ApplicationState {
   [FEATURE_KEY]: ContactsState;
 }
 ```
-  * Define the **contactsReducer** as a **pure** function:
-4.  Update the `src/app/contacts-ngrx.module.ts` to use `StoreModule.forFeature()` register the `contacts` state management within our application by using the `StoreModule.forFeature()` function.
-5.  Modify the **ContactsListComponent**:
+6.  Modify the **ContactsListComponent**:
   * Inject our custom store dispatcher.
   * Within `ngOnInit()`, use the store to query for a contacts list observable: `Observable<Array<Contact>>`. 
     > Remember to use the `select` operator from `@ngrx/store`.
