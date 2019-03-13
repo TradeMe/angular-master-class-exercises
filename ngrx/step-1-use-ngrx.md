@@ -44,7 +44,7 @@ At first glance this looks overly complex when we could simply update our `this.
 
 ###### `contacts-list.component.ts`
 
-![ng1 3](https://user-images.githubusercontent.com/210413/46913042-1f54a680-cfe2-11e8-9fc2-ade94c24b100.jpg)
+![ng1 3](https://s3.amazonaws.com/media-p.slid.es/uploads/95066/images/5855691/pasted-from-clipboard.png)
 
 
 ###### `contacts-ngrx.module.ts`
