@@ -129,6 +129,6 @@ Go to [Step 7: Refactor to Facade Architecture](step-6-reactor-to-facade-archite
 
 ## Technical Considerations
 
-In our Effects above, we utilize `concatMap` to map the action payload to an inner Observable that performs an http request, e.g. `this.contactsService.getContacts()` or `this.contactsService.updateContact(contact)`. Here, it makes sense to use `contactMap` over `switchMap` because we don't want to cancel previous update requests but rather wait for them to finish before another update action is sent.
+In our Effects above, we utilize `concatMap` to map the action payload to an inner Observable that performs an http request, e.g. `this.contactsService.getContacts()` or `this.contactsService.updateContact(contact)`. Here, it makes sense to use `concattMap` over `switchMap` because we don't want to cancel previous update requests but rather wait for them to finish before another update action is sent.
 
 It is important to note that the **updateContact$** effect not only saves the contact it also actually routes to the contact details view. To navigate back to the details page, use the `tap` operator to perform user navigation. Notice, the **`tap`** operator only executes a callback for each event without manipulating the stream.
