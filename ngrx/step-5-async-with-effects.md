@@ -1,6 +1,6 @@
 ## Exercise: Using Effects for Asynchronous Actions
 
-In **ngrx**-land, we can use the **@Effect** decorators to solve the problems of asynchronous activity. Effects allow developers to centralize all asynchronous work. When each async activity completes then
+In **NgRx**-land, we can use the **@Effect** decorators to solve the problems of asynchronous activity. Effects allow developers to centralize all asynchronous work. When each async activity completes then
 synchronous actions are dispatched.
 
 *  Effects should be considered **side effect** or **background processes** within an application.
